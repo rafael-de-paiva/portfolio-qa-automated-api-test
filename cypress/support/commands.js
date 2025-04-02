@@ -52,6 +52,7 @@ Cypress.Commands.add('deleteInfo', (id, token) => {
     cy.request({
         method: 'DELETE',
         url: `/booking/${id}`,
+        failOnStatusCode: false,
         headers: {
             'Cookie': `token=${token}`
         }
